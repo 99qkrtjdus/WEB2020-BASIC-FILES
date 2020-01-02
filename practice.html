@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		header#mh>div.mu{border: 1px solid #000;}
+		header#mh>div.mu>nav.um{
+			width: 980px;
+			margin: 0 auto;
+			background-color: lightblue;
+		}
+		header#mh>div.mu>nav.um>ul{
+            float: right;
+		}
+		header#mh>div.mu>nav.um>ul>li{
+			float: left;
+			position: relative;
+		}
+		header#mh>div.mu>nav.um>ul>li>a{
+			display: block;
+			line-height: 30px;
+			text-align: center;
+			padding: 0 20px;
+		}
+		header#mh>div.mu>nav.um>ul>li:after{
+			content: "";
+			display: block;
+			width: 1px;
+			height: 10px;
+			background-color: #000;
+			position: absolute;
+			top: 10px;
+		}
+		header#mh>div.mu>nav.um>ul>li:first-child:after{
+			content: "";
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+<header id="mh">
+	<div class="mu">
+		<nav class="um clearfix">
+			<ul class="clearfix">
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+				<li><a href="#">menu</a></li>
+			</ul>
+		</nav>
+	</div>
+
+
+</header>
+
+
+</body>
+</html>

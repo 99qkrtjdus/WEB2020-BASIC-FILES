@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/style.css">
 	
 	<style>
 		div.view{background-color: #f00;}
@@ -62,18 +62,18 @@
         	margin: 0 auto;
         }
 
-       .bx-wrapper {
+/*       .bx-wrapper {
             -moz-box-shadow: none;
             -webkit-box-shadow: none;
             box-shadow: none;
             border: 0px none;
             background: #fff;
-        }
+        }*/
         
         div.box{
 			width: 200px; 
 			height: 200px;
-			background-color:#skyblue;
+			background-color:skyblue;
 			position: absolute; 
 			left: 100px; 
 			top: 100px;
@@ -83,7 +83,7 @@
 	    div.box1{
 			width: 200px; 
 			height: 200px;
-			background-color:#red;
+			background-color:red;
 			position: absolute; 
 			left: 150px; 
 			top: 150px;
@@ -91,18 +91,17 @@
 		}
 	    
 	    div.boxWrap{
-		position: relative;
+		position: relative;  
 		background-color: #00f;
 		height: 200px;
 	    }
 
-
 	</style>
 
 	<script>
-		$(document).ready(function(){
+		$(document).ready(function(){ 
 			$(".slider").bxSlider();
-		});
+		}); 
 
 
 	</script>

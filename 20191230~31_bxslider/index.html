@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+    <style>
+        div.sliderWrap{
+        	width: 500px; 
+        	margin: 0 auto;
+        	position: relative;
+        }
+        .bx-wrapper {
+            -moz-box-shadow: 0 none;
+            -webkit-box-shadow: 0 none;
+            box-shadow: 0 none;
+            border: 0 none;
+            margin-bottom: 0;
+        }
+
+        .bx-wrapper .bx-pager{
+            position: absolute;
+            bottom: -30px;
+            width: 100%;
+        }
+
+        .nextBtn, .prevBtn{
+        	position: absolute; 
+        	top: 50%;
+            margin-top: -50px;
+            cursor: pointer;
+        }
+
+        .nextBtn{right: 0;}
+
+        .sliderOne{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+    </style> 
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>	
+    <script>
+        $(document).ready(function(){
+   
+        	var mySlide = $(".slider").bxSlider({
+        		auto:true,
+        		controls:false,
+        		pager:false
+        	});
+
+        $("nextBtn").click(function(){
+            mySlide.goToNextSlide();
+        	});
+
+        $("prevBtn").click(function(){
+        	mySlide.goToPrevSlide();
+        });
+
+
+   
+        $(".sliderOne").bxSlider();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="sliderWrap">
+    	<ul class="slider">
+    		<ul><img src="images/pc01.jpg" alt=""></ul>
+    		<ul><img src="images/pc02.jpg" alt=""></ul>
+    		<ul><img src="images/pc03.jpg" alt=""></ul>
+    	</ul>
+    	
+    	<div class="nextBtn">
+    		<img src="images/btn_right.png" alt="다음">
+    	</div>
+
+    	<div class="prevBtn">
+    		<img src="images/btn_left.png" alt="이전">
+    	</div>
+    </div>
+
+    <div style="height: 200px; background-color: salmon;" onclick=" dLink();"></div>
+
+    <ul class="sliderOne">
+            <ul><img src="images/pc01.jpg" alt=""></ul>
+            <ul><img src="images/pc02.jpg" alt=""></ul>
+            <ul><img src="images/pc03.jpg" alt=""></ul>
+   </ul>
+</body>
+</html>

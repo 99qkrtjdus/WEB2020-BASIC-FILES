@@ -1,74 +1,95 @@
 <!DOCTYPE html>
 <html lang="kor">
+
 <head>
   <meta charset="UTF-8">
   <title>layout 복습</title>
   <style>
     /*reset*/
-    *{padding: 0; margin: 0;}
-    li{list-style: none;}
-    a:visited,a:link{
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a:visited,
+    a:link {
       text-decoration: none;
       color: #000
     }
-    
-    div.header{
+
+    div.header {
       width: 1200px;
       /* background-color: skyblue;*/
       margin: 0 auto;
-      padding-top: 10px; margin-bottom: 20px;
+      padding-top: 10px;
+      margin-bottom: 20px;
     }
-    
-    div.header>h1{
+
+    div.header>h1 {
       width: 100px;
       background-color: #fff;
       margin: 0 auto;
       text-align: center;
     }
-    
-    div.header>div.nav{padding-top: 20px;}
-    
-    div.header>div.nav>ul:after{
+
+    div.header>div.nav {
+      padding-top: 20px;
+    }
+
+    div.header>div.nav>ul:after {
       content: "";
       display: block;
       clear: both;
     }
-    div.header>div.nav>ul>li{
+
+    div.header>div.nav>ul>li {
       background-color: skyblue;
       float: left;
       width: 20%;
     }
-    div.header>div.nav>ul>li>a{
+
+    div.header>div.nav>ul>li>a {
       text-align: center;
       display: block;
-      line-height: 40px; 
+      line-height: 40px;
     }
-    div.header>div.nav>ul>li:hover{
+
+    div.header>div.nav>ul>li>a:hover {
       background-color: #00f;
     }
-    div.header>div.nav>ul>li>:hover a{color: white;}
-    
-    div.visual{
+
+    div.header>div.nav>ul>li>:hover a {
+      color: white;
+    }
+
+    div.visual {
       height: 400px;
       background-color: pink;
     }
+
   </style>
 </head>
+
 <body>
   <div class="header">
-  <h1>logo</h1>
-  <div class="nav">
-    <!--ul>li*5>a[#]>{menu}-->
-   <ul>
-    <li><a href="#">menu</a></li>
-    <li><a href="#">menu</a></li>
-    <li><a href="#">menu</a></li>
-    <li><a href="#">menu</a></li>
-    <li><a href="#">menu</a></li>
-   </ul>
+    <h1>logo</h1>
+    <div class="nav">
+      <!--ul>li*5>a[#]>{menu}-->
+      <ul>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">menu</a></li>
+      </ul>
+    </div>
   </div>
-  </div>
-  
+
   <div class="visual"></div>
 </body>
+
 </html>
