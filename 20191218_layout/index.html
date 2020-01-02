@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>layout</title>
+		
+	<style>
+	   /*reset*/
+       *{padding: 0; margin: 0;}
+       li{list-style: none;}
+       a:visited,a:link{
+       text-decoration: none;
+       color: #000
+        }
+
+        /* header start */
+        div#header{
+           width: 1000px;
+           margin: 0 auto;
+           padding-top: 10px; 
+           margin-bottom: 20px;
+        }
+
+        div#header>h1{
+            width: 100px;
+            text-align: center;
+            margin: 0 auto;
+            background-color: #fff;
+        } 
+
+        div#header>ul.gnb{padding-top: 20px;}
+        
+        div#header>ul.gnb:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        div#header>ul.gnb>li{
+            background-color: red;
+            float: left;
+            width: 160px;
+        }
+        div#header>ul.gnb>li>a{
+            text-align: center;
+            display: block;
+            line-height: 40px; 
+        }
+        div#header>ul.gnb>li>a:hover{
+            background-color: orange;
+        }
+        div#header>ul.gnb>li>:hover a{color: white;}
+
+        /* header end */
+
+
+        /* visual */
+        div.visual{
+            height: 400px;
+            background-color: salmon;
+            margin-bottom: 20px;
+        }     
+        /* visual */
+
+        /* container */     
+        .container{
+           width: 1000px;
+           margin: 0 auto;
+           margin-bottom: 20px;
+           padding: 20px 0;
+
+        }
+
+        .container h3{
+           text-align: center;
+           margin-bottom: 20px;
+        }
+
+        .container>ul:after{
+           content: ""; 
+           display: block;
+           clear: both;
+        }
+        
+        .container>ul>li{
+           background-color: #f00;
+           width: 242.5px;
+           float: left;
+           margin-right: 10px;
+        }
+        
+        .container>ul>li:last-child{
+           margin-right: 0;
+        }
+        
+        .container>ul>li>img{
+           width: 100%; 
+           display: block;}
+        
+        .skyblue{background-color: skyblue;}   
+        .pink{background-color: pink;}
+        .gray{background-color: gray;}
+        /* container */
+        
+
+        /* footer */
+         div#footer{
+         	height: 100px;
+            background-color: #000;
+         }
+         /* footer */
+    </style>
+</head>
+
+<body>
+	<!-- header -->	
+	<div id="header">
+		<h1>logo</h1>
+		<ul class="gnb">
+           <li><a href="#" 3="">menu1</a></li>
+           <li><a href="#" 3="">menu1</a></li>
+           <li><a href="#" 3="">menu1</a></li>
+           <li><a href="#" 3="">menu1</a></li>
+           <li><a href="#" 3="">menu1</a></li>
+           <li><a href="#" 3="">menu1</a></li>
+		</ul>
+	</div>
+	<!-- header -->	
+
+
+	<div class="visual"></div>
+
+	<!-- container -->
+<div class="skyblue">
+	<div class="container">
+		<h3>gallery</h3>
+		<ul>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+		</ul>
+	</div>
+</div>
+    
+    <div class="conWrap pink">
+        <div class="container">
+		<h3>report</h3>
+		<ul>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+		</ul>
+	    </div>
+    </div>
+
+     <div class="conWrap gray">
+        <div class="container">
+		<h3>notice</h3>
+		<ul>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+			<li><img src="../img/testimg.jpg" alt=""></li>
+		</ul>
+	    </div>
+    </div>
+	<!-- container -->
+
+	<!-- footer -->
+	<div id="footer"></div>
+	<!-- footer -->
+
+</body>
+	</html>	
