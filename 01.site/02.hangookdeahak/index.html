@@ -9,16 +9,31 @@
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.bxslider.js"></script>
   <script>
-     $(document).ready(function(){
-      $(".slider").bxSlider();  
-      $(".slidertwo").bxSlider();
-     });   
+    $(document).ready(function(){
+      var mySlide = $(".slider").bxSlider({
+        controls:false
+      });
+
+      $(".nextBtn").click(function(){
+        mySlide.goToNextSlide();
+      });
+
+      $(".prevBtn").click(function(){
+        mySlide.goToPrevSlide();
+      });
+  
+     
+      $(".slidertwo").bxSlider({
+        controls:false
+      });
+
+    }); 
   </script>
 </head>
 
 <body>
 <header id="header">
-<div class="main">
+  <div class="main">
   <div class="headertop clearfix">
     <nav class="headerleft clearfix">
       <ul class="clearfix">
@@ -57,7 +72,7 @@
     </div>
   </div>
 
-  </div>  
+  </div> 
 </header>
 
 <div class="container">
@@ -91,38 +106,183 @@
   </div>  
  
   <div id="sliderWrap">
-    <ul>
+    <ul class="clearfix">
       <li>
         <ul class="slider">
-          <li><img src="img/mainslider.jpg" alt=""></li>
-          <li><img src="img/mainslider.jpg" alt=""></li>
-          <li><img src="img/mainslider.jpg" alt=""></li>
+          <li>
+            <img src="img/mainslider.jpg" alt="">            
+            <div class="mainsliderTxt">
+              <p>한국<span>에서</span> 
+                <br>시작<span>하는 
+                <br>새로운</span> 꿈
+              </p>
+              <a href="#" class="btn">자세히보기 ▶</a>
+            </div>
+          </li>
+
+          <li>
+            <img src="img/mainslider.jpg" alt="">
+             <div class="mainsliderTxt"> 
+              <p>한국<span>에서</span> 
+                <br>시작<span>하는 
+                <br>새로운</span> 꿈
+              </p>
+              <a href="#" class="btn">자세히보기 ▶</a>
+            </div>
+          </li>
+
+          <li>
+            <img src="img/mainslider.jpg" alt="">
+            <div class="mainsliderTxt"> 
+              <p>한국<span>에서</span> 
+                <br>시작<span>하는 
+                <br>새로운</span> 꿈
+              </p>
+              <a href="#" class="btn">자세히보기 ▶</a>
+            </div>
+          </li>
+        </ul>
+        <div class="nextBtn">
+          <img src="img/btn2.jpg" alt="다음">
+        </div>
+        <div class="prevBtn">
+           <img src="img/btn1.jpg" alt="이전">
+        </div>
+      </li>
+
+      <li>
+        <img src="img/book2.jpg" alt="">
+        <div class="secondTxt"> 
+              <p><span>APP</span>으로
+              <br><span>스마트 도서관</span> 
+              <br>바로이용하자!
+              </p>
+              <p class="two">모바일 열람증은
+              <br>도서관 자료실/도서대출 등에
+              <br>사용할 수 있습니다
+              </p>
+              <a href="#" class="btn2">자세히보기 ▶</a>
+        </div>
+      </li>
+
+      <li>
+        <p class="txt">HOT LINK</p>
+        <ul class="icon">
+          <li>
+            <img src="img/n1.png" alt="">
+            <p>국제교류
+            <br>센터
+            </p>
+          </li>
+          <li>
+            <img src="img/n2.png" alt="">
+            <p>원격지원
+            <br>시스템
+            </p>
+          </li>
+          <li>
+            <img src="img/n3.png" alt="">
+            <p>예산/결산
+            <br>공고
+          </p>
+          </li>
         </ul>
       </li>
 
-      <li><img src="img/book.jpg" alt=""></li>
+    <li>
+     <img src="img/school0.jpg" alt="">
+     <div class="gongji">
+      <p>공지사항</p>
+      <ul>
+      <li><a href="#">[공지]한국대학교 웹진...<span>2016-06-12</span> </a></li>
+      <li><a href="#">[보도]우수대학교 선정 수상<span>2016-06-17</span></a></li>
+      <li><a href="#">[공지]대학입시 설명회<span>2016-06-05</span></a></li>
+      <li><a href="#">[공지]2016년 1학기 성적...<span>2016-05-14</span></a></li>
+      </ul>
+     </div>
+    </li>
 
-      <li></li>
       <li>
-        <img src="img/school0.jpg" alt="">
-        <p>한국에서 시작하는 새로운 꿈</p>
+     <p class="newstxt">SNS NEWS</p>
+     <div class="news">
+      <img src="img/hakgyo.jpg" alt="">
+      <p>한국대학교는
+      <br>2017학년도 신입생
+      <br>입학식을 3월 2일 (목)
+      <br>본교 체육관...
+      </p>
+     </div>
+     <ul class="sns">
+       <li><a href="#"><img src="img/fb.png" alt=""></a></li>
+       <li><a href="#"><img src="img/tw.png" alt=""></a></li>
+       <li><a href="#"><img src="img/gg.png" alt=""></a></li>
+       <li><a href="#"><img src="img/yt.png" alt=""></a></li>
+     </ul> 
       </li>
-      <li></li>
-      <li><img src="img/school2.jpg" alt=""></li>
+
+      <li>
+      <img src="img/school2.jpg" alt="">
+      <div class="btnwrap">
+        <p class="bg1">캠퍼스 투어</p>
+      </div> 
+      </li>
+
       <li><img src="img/school3.jpg" alt=""></li>
+      
       <li>
-        <ul class="slidertwo">
-          <li><img src="img/slider2.jpg" alt=""></li>
-          <li><img src="img/slider2.jpg" alt=""></li>
-          <li><img src="img/slider2.jpg" alt=""></li>
-        </ul>
+     <ul class="slidertwo">
+      <li>
+       <img src="img/slider2.jpg" alt="">
+       <div class="lastTxt">
+         <p>2017신·편입생 2차 모집
+         <br><span>2017.7.1~7.10</span>
+         </p>
+         <a href="#" class="btn3">자세히보기 ▶</a>
+        </div>
+      </li>
+      <li>
+       <img src="img/slider2.jpg" alt="">
+       <div class="lastTxt">
+         <p>2017신·편입생 2차 모집
+         <br><span>2017.7.1~7.10</span>
+         </p>
+         <a href="#" class="btn3">자세히보기 ▶</a>
+        </div>
+      </li>
+      <li>
+       <img src="img/slider2.jpg" alt="">
+       <div class="lastTxt">
+         <p>2017신·편입생 2차 모집
+         <br><span>2017.7.1~7.10</span>
+         </p>
+         <a href="#" class="btn3">자세히보기 ▶</a>
+        </div>
+      </li>
+     </ul>
       </li>
     </ul>
-
-  </div>
-
 </div>
 
+  <footer class="footer">
+  <div class="addresswrap">
+    <address class="ft">
+      <h3>
+        회사소개 | 한국대학교 | 개인정보취급방침 | 이용정책 | 
+        입점/제휴문의 및 광고 | 이메일무단수집거부
+      </h3>
+      <p>
+        대표자 : 홍길동 서울시 구로구 구로로 300(구로동 6가)   사업자등록번호 : 123-45-6789101
+      </p>
+      <p>
+        통신판매업 신고번호 : 제1234-서울 구로구-1004호 개인정보관리 책입자 : 홍길동 소비자피해보상보험
+      </p>
+      <p>
+        고객센터 : 1234-5678 FAX:02-1234-5678 HANGUKUNIVERSITY@HANGUK.COM
+      </p>
+      <p> Copyright(c) HANGUK ALL right reserved</p>
+    </address>
+  </div>
+  </footer>
 
 </body>
 </html>

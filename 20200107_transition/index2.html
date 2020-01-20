@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.contentWrap{padding-top: 30px; padding-bottom: 30px;}
+		.contentWrap>.headerTitle{
+			width: 1200px; 
+			margin: 0 auto;
+			margin-bottom: 40px;
+		}
+		.contentWrap>.headerTitle>h2{text-align: center;}
+		.contentWrap>.headerTitle>h2:after{
+      content: "";
+      display: block;
+      width: 150px;
+      height: 2px;
+      background-color: #333;
+      margin: 15px auto;
+		}
+		.contentWrap>.headerTitle>p{text-align: center;}
+		.contentWrap>ul.content{width: 1200px; margin: 0 auto;}
+		.contentWrap>ul.content>li{
+			float: left;
+			width: 288.75px;
+			height: 288.75px;
+      margin-right: 15px;
+      position: relative;
+      overflow: hidden;
+		}
+    .contentWrap>ul.content>li:last-child{margin-right: 0;}
+		.contentWrap img{width: 100%; display: block;}
+
+		ul.content>li{}
+		ul.content>li>.overlay{
+			width: 100%;
+			height: 100%;
+			background-color:rgba(0,255,0,0.5);
+			position: absolute;
+			top: 100%;
+			left: 0;
+			padding-top: 120px;
+			transition: 0.3s;
+		}
+		ul.content>li>.overlay>.text{
+			text-align: center;
+			color: white;
+			font-weight: bold;
+		}
+
+		ul.content>li:hover .overlay{top: 0;}
+
+		.pink{background-color: pink;}
+    
+    .bg1{
+    	background-image: url(../images/pc01.jpg);
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	-webkit-background-size: cover;
+			background-size: cover;
+			background-attachment: fixed; 
+    }
+    
+	</style>
+</head>
+<body>
+	<div class="contentWrap">
+    <div class="headerTitle">
+	    <h2>GALLERY</h2>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque?</p>
+    </div>
+
+  	<ul class="content clearfix">
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  	</ul>
+  </div>
+
+  <div class="contentWrap bg1">
+    <div class="headerTitle">
+	    <h2>GALLERY</h2>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque?</p>
+    </div>
+
+  	<ul class="content clearfix">
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  	</ul>
+  </div>
+
+  <div class="contentWrap pink">
+    <div class="headerTitle">
+	    <h2>NOTICE</h2>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque?</p>
+    </div>
+
+  	<ul class="content clearfix">
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  		<li>
+  			<img src="../images/testimg.jpg" alt="">
+  			<div class="overlay">
+  		        <div class="text">Lorem ipsum.</div>
+  	        </div>
+  		</li>
+  	</ul>
+  </div>	
+</body>
+</html>

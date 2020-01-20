@@ -1,0 +1,58 @@
+@charset="UTF-8";
+
+fieldset{border: 0 none;}
+legend{
+    display: block; 
+    position: absolute; 
+    left: 0; top: -9999px;
+}
+
+.f_layer{
+    width: 275px; 
+    margin: 0 auto;
+}
+
+.f_layer fieldset label{
+    display: block; 
+    padding: 5px 0;
+}
+
+.f_layer fieldset select{
+    display: block; 
+    width: 100%;
+    height: 40px; 
+    font-size: 1em; 
+    text-indent: 8px;
+    border-radius: 5px;
+}
+        
+.f_layer fieldset .sleft,
+.f_layer fieldset .sright{
+    float: left; 
+    width: 130px;
+    margin-bottom: 10px;
+}
+
+.f_layer fieldset .sleft input,
+.f_layer fieldset .sright input{ 
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #cdcdcd;
+    height: 40px;
+    text-indent: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.f_layer fieldset .sleft{margin-right: 10px;}
+.f_layer fieldset .sright{}
+
+.btn-area .btn-submit{
+    width: 280px;
+    height: 40px;
+    margin: 0 auto;
+    border: 2px solid #ea4f1f;
+    background: #ea4f1f url(../img/btnicon.png) no-repeat;
+    text-indent: -9999px;
+    cursor: pointer;
+}
