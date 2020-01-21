@@ -5,11 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>여행사</title>
+	<script src="js/wow.js"></script>
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style2.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
+	
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function() {
@@ -23,6 +26,9 @@
 			});
 		});
 
+	</script>
+	<script>
+		new WOW().init();
 	</script>
 </head>
 
@@ -299,8 +305,8 @@
 		</div>
 
 		<div class="boxwrapper">
-			<ul >
-				<li>
+			<ul>
+				<li class = "wow bounceInLeft" data-wow-delay="0">
 					<ul class="slider01">
 						<li><img src="img/trip03.png" alt=""></li>
 						<li><img src="img/trip03.png" alt=""></li>
@@ -311,7 +317,7 @@
             <br><span>★★★☆☆</span></p>
           </div>
 				</li>
-				<li>
+				<li class="wow zoomIn" data-wow-delay="0.3s">
 					<ul class="slider01">
 						<li><img src="img/trip04.png" alt=""></li>
 						<li><img src="img/trip04.png" alt=""></li>
@@ -322,21 +328,21 @@
             <br><span>★★★☆☆</span></p>
           </div>
 				</li>
-				<li>
+				<li class="wow zoomIn" data-wow-delay="0.6s">
 				  <img src="img/trip05.jpg" alt="">
           <div class="btm">
             <p>20˚C 구름조금
             <br><span>습도60% 바람 남남동 2m/s</span></p>
           </div>	
 				</li>
-				<li>
+				<li class="wow zoomIn" data-wow-delay="0.9s">
 				  <img src="img/trip06.jpg" alt="">
           <div class="btm2">
             <p>facebook 여행후기
             <br><span>(임정희님)</span></p>
           </div>
 				</li>
-				<li>
+				<li class="wow zoomIn" data-wow-delay="2.1s">
 				  <img src="img/trip07.png" alt="">
 				  <div class="textwrap">
 				  	<h3>여행정보</h3>
@@ -346,7 +352,7 @@
 				  </div>
 				  <img src="img/plus.png" alt="" class="plusicon">
 				</li>
-				<li>
+				<li class="wow zoomIn" data-wow-delay="1.8s">
 					<img src="img/trip08.png" alt="">
 					<div class="textwrap">
 				  	<h3>맛집정보</h3>
@@ -356,7 +362,7 @@
 				  </div>
 				  <img src="img/plus.png" alt="" class="plusicon">
 				</li>
-				<li>
+				<li class="wow zoomIn" data-wow-delay="1.5s">
 					<img src="img/trip09.png" alt="">
 					<div class="textwrap">
 				  	<h3>숙박정보</h3>
@@ -366,7 +372,7 @@
 				  </div>
 				  <img src="img/plus.png" alt="" class="plusicon">
 				</li>
-				<li>
+				<li class="wow bounceInRigh" data-wow-delay="1.2s">
 					<img src="img/trip10.png" alt="">
 					<div class="textwrap">
 				  	<h3>여행자후기</h3>
@@ -378,7 +384,6 @@
 				</li>
 			</ul>
 		</div>
-	</div>
   
   <footer class="footer">
   	<div class="addresswrap">
