@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>object2</title>
+
+</head>
+
+<body>
+
+		<p id="msg1"></p>
+		<p id="msg2"></p>
+		<p id="msg3"></p>
+		
+		<script>
+			var obj={
+		      m1: function(){
+		      	return "Hello Sonata";
+		      },
+		      m2: function(a){
+		      	var result=a;
+		      	return result;
+		      },
+		      m3: function(a,b){
+		      	var result=a+b;
+		      	return result;
+		      }
+			};
+			document.getElementById("msg1").innerHTML=obj.m1();
+			document.getElementById("msg2").innerHTML=obj.m2(100);
+			document.getElementById("msg3").innerHTML=obj.m3(100,200);
+		</script>
+		
+		<div class="msg1"></div>
+		<div class="msg2"></div>
+		<div class="msg3"></div>
+		
+		<script>
+			var obj={
+		      m1: function(){
+		      	return "Hello Sonata";
+		      },
+		      m2: function(a){
+		      	var result=a;
+		      	return result;
+		      },
+		      m3: function(a,b){
+		      	var result=a+b;
+		      	return result;
+		      }
+			};
+			document.getElementsByClassName("msg1")[0].innerHTML=obj.m1();
+		
+			document.getElementsByClassName("msg2")[0].innerHTML=obj.m2(100);
+		
+			document.getElementsByClassName("msg3")[0].innerHTML=obj.m3(100,200);
+		</script>
+		
+		
+		<script>
+			var divTags = document.getElementsByTagName("div");
+			console.log("div tag count : " + divTags.length);
+			var pTags = document.getElementsByTagName("p");
+			console.log("p tag count : " + pTags.length);
+		
+			// divTags[0].style.border = "2px solid #0f0";
+			// pTags[0].style.border = "2px solid #f0f";
+		
+		  function divColor(){
+		  	for(var i=0; i<divTags.length; i++){
+			divTags[i].style.color= "red";
+			divTags[i].style.fontWeight= "bold";
+			divTags[i].style.border= "3px solid #f00";
+		  }
+		
+		  for(var i=0; i<pTags.length; i++){
+			pTags[i].style.color = "blue";
+			pTags[i].style.fontWeight= "bold";
+			pTags[i].style.border= "3px solid #00f";
+		  }
+		
+		  }
+		
+		  function divColorClear(){
+		    for(var i=0; i<divTags.length; i++){
+			divTags[i].style.color = "black";
+			divTags[i].style.fontWeight= "normal";
+			divTags[i].style.border= "1px solid darkgray";
+		  }
+		
+		  for(var i=0; i<pTags.length; i++){ 
+			pTags[i].style.color = "black";
+			pTags[i].style.fontWeight= "normal";
+			pTags[i].style.border= "1px solid lightgray";
+		  }
+		  }
+		
+		</script>
+		  <button type="button" onclick="divColor()">div border바꾸기</button>   
+		  <button type="button" onclick="divColorClear()">원상태로</button>
+</body>
+</html>

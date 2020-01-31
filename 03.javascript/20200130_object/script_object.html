@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>object</title>
+
+</head>
+
+<body>
+  <div id="var1"></div>		
+  <div id="var2"></div>		
+  <div class="var3">1</div>			
+  <div class="var3">2</div>			
+
+
+  <script>
+		var car = ["sonata",100,"white"];
+		var car1 = {name:"Volt",speed:200,color:"Red"};
+		document.getElementById("var1").innerHTML = "자동차 이름 : " + car1.name;
+		document.getElementById("var2").innerHTML = "자동차 속도 : " + car1["speed"];
+		document.getElementsByClassName("var3")[1].innerHTML = "자동차색깔 : " + car1.color;
+
+		// var carColor = document.getElementByClassName("var3");
+		// carColor[0].innerHTML = "자동차의 색상";
+	</script>
+
+</body>
+</html>
