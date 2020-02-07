@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		function init(){
+			var p = document.getElementById("p");
+			var div = document.getElementById("div");
+			p.onmouseover = over;
+			p.onmouseout = out;
+
+			div.addEventListener("mouseover",overDiv);
+			div.addEventListener("mouseout",outDiv);
+		}
+
+
+		function over(){
+			p.style.backgroundColor = "orchid";
+		}
+		function out(){
+			p.style.backgroundColor = "white";
+		}
+
+    function overDiv(){
+			div.style.backgroundColor = "skyblue";
+		}
+
+		function outDiv(){
+			div.style.backgroundColor = "white";
+		}
+
+
+
+	</script>
+</head>
+
+<body onload="init()">
+  <h3>Lorem ipsum dolor.</h3>
+  <hr>
+  <p id="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, deserunt?</p>
+  <div id="div">Lorem ipsum dolor sit amet.</div>	
+</body>
+</html>

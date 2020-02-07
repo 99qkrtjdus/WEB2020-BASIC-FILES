@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>:::COMPANY:::</title>
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
@@ -11,7 +12,34 @@
 	<script>
 		$(document).ready(function(){
 			$(".slider").bxSlider();
+			$(document).ready(function(){
+			// $(".togglemenu").on("click",function(){})
+			$(".togglemenu").click(function(){
+				var myClass = $(this).attr("class");
+				console.log(myClass)
+				if(myClass == "togglemenu"){
+					$(".togglemenu").addClass("change");
+					$("#main_menu").animate({left:0},300)
+				}else{
+					$(".togglemenu").removeClass("change");
+					$("#main_menu").animate({left:"100%"},300);
+				}
+			})
+			$(window).resize(function(){
+				var wSize = $(window).width();
+				console.log(wSize);
+				if(wSize > 960){
+				  $("#header_top").find(".togglemenu").
+					  removeClass("change");
+				}else{
+					$("#header_top").find(".togglemenu").
+					  removeClass("change");
+          $("#main_menu").css({left:"-100%"});
+				}
+			})
+		})
 		});
+
 	</script>
 
 </head>
@@ -29,6 +57,11 @@
 					<li><a href="#">인재채용</a></li>
 				</ul>
 			</nav>
+			<div class="togglemenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
 		</div>
 		<div class="slider_wrap">
 			<ul class="slider">
