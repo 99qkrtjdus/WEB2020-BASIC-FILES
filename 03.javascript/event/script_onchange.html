@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+	 function changeImg(){
+	 	var sel = document.getElementById("sel");
+	 	var img = document.getElementById("myImg");
+
+	 	var index = sel.selectedIndex;
+	 	console.log(sel.options[0].value);
+
+	  img.src = sel.options[index].value;
+
+	  console.log(img.width);
+	  var mySpan = document.getElementById("mySpan");
+	  mySpan.innerHTML = img.width+"x"+img.height;
+
+	  window.onload = function(){
+	  	var img = document.getElementById("myImg");
+	  	var mySpan = document.getElementById("mySpan");
+	  	mySpan.innerHTML = img.width+"x"+img.height;
+	  };
+
+
+
+	 }
+	</script>
+</head>
+
+<body>
+  <form>
+  	<select  id="sel"	 onchange="changeImg()">
+  		<option value="../../img/apple.png">사과</option>
+  		<option value="../../img/banana.png">바나나</option>
+  		<option value="../../img/testimg.jpg">에펠탑</option>
+  	</select>
+  	<span id="mySpan">이미지크기</span>
+  </form>
+  <img src="../../img/apple.png" alt="사과" id="myImg">	
+</body>
+</html>

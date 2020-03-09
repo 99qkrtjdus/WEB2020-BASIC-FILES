@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		var next = 0;
+		function change(){
+			next++;
+			if(next == 10){
+				next = 1;
+			}
+			console.log(next);
+		}
+	</script>
+</head>
+   
+<body>
+  <img src="../../img/apple.png" alt="" onclick="change()">	
+</body>
+</html>

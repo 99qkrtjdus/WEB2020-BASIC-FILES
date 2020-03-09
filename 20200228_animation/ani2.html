@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		body{background-color: skyblue;}
+		.man{
+			width: 114px;
+			height: 240px;
+			position: relative;
+			left: 200px;
+			animation:bounce 1s infinite alternate;
+		}
+		@keyframes bounce{
+			50%{transform: translateX(10px) translateY(10px);}
+		}
+
+
+		.man > div{position: absolute;}
+		div.body{z-index: 2;}
+		.man > div.arm1{
+			top: 100px; left: -20px;
+			animation: aRight 1s linear infinite alternate;
+			transform-origin: 80px 14px;
+			z-index: 3; 
+		}
+
+		@keyframes aRight{
+      from{transform: rotate(20deg);}
+      to{transform: rotate(-40deg);}
+		}
+		.man > div.arm2{
+			top: 100px; left: -20px;
+			animation: aLeft 1s linear infinite alternate;
+			transform-origin: 80px 14px;
+			z-index: 1;
+		}
+		@keyframes aLeft{
+      from{transform: rotate(-40deg);}
+      to{transform: rotate(20deg);}
+		}
+
+		.man > div.foot01{
+			position: absolute;
+			top: 210px; 
+			left: -5px;
+			z-index: 1; 
+			transform: rotate(-20deg);
+			animation: fRight 1s linear infinite alternate;
+			transform-origin: 23px 34px;
+		}
+
+		@keyframes fRight{
+      from{transform: rotate(40deg);}
+      to{transform: rotate(-20deg);}
+		}
+
+		.man > div.foot02{
+			position: absolute;
+			top: 210px; 
+			left: -5px;
+			z-index: 1;
+			transform: rotate(40deg);
+			animation: aLeft 1s linear infinite alternate;
+			transform-origin: 23px 34px;
+		}
+
+		@keyframes fLeft{
+      from{transform: rotate(-20deg);}
+      to{transform: rotate(40deg);}
+		}
+	</style>
+</head>
+<body>
+	<div class="man">
+		<div class="body"><img src="../img/body01.png" alt="1"></div>
+		<div class="arm1"><img src="../img/arm01.png" alt="1"></div>
+		<div class="arm2"><img src="../img/arm01.png" alt="1"></div>
+		<div class="foot01"><img src="../img/foot01.png" alt="1"></div>
+		<div class="foot02"><img src="../img/foot02.png" alt="1"></div>
+	</div>
+</body>
+</html>

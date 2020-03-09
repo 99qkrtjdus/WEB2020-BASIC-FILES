@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			var current = 0;
+			var banner = $("ul.slider li");
+			var bCount = banner.length;
+			var i;
+
+			function nextSlider(){
+				i = current + 1;
+				if(i==bCount){
+					i=0;
+					current=bCount-1;
+				}
+				var currentEl = banner.eq(current);
+				var nextEl = banner.eq(i);
+				
+				currentEl.css({left:0}).stop().animate({left:"-100%"},1000);
+				nextEl.css({left:"100%"}).stop().animate({left:0},1000);
+
+				current = i;
+			}
+
+			function prevSlider(){
+				i = current - 1;
+				if(i==-1){
+					i=bCount-1;
+					current=0;
+				}
+				var currentEl = banner.eq(current);
+				var nextEl = banner.eq(i);
+				currentEl.css({left:0}).stop().animate({left:"100%"},1000);
+				nextEl.css({left:"-100%"}).stop().animate({left:0},1000);
+				current = i;
+			}
+
+			$(".bt_next").click(function(){
+				nextSlider();
+				console.log(current);
+			});
+			$(".bt_prev").click(function(){
+				prevSlider();
+				console.log(current);
+			}); 
+		});
+	</script>
+
+	<style>
+		#wrapper{width: 500px; height: 208px; margin: 20px auto; }
+		#wrapper img{width: 500px; display: block;}
+		#wrapper ul{width: 500px; height: 208.33px; position: relative; overflow: hidden;}
+		#wrapper ul li{position: absolute; left: 100%;}
+		#wrapper ul li:nth-child(1){left: 0;}
+
+    div.btn{position: relative;}
+		div.btn span{cursor: pointer; position: absolute; color: white}
+		.bt_prev{top: -125px; font-weight: bold;}
+		.bt_next{top: -125px; right: 0; font-weight: bold;}
+
+	</style>
+</head>
+
+<body>
+  <div id="wrapper">
+  	<ul class="slider">
+  		<li><img src="../../img/pc01.jpg" alt="1"></li>
+  		<li><img src="../../img/pc02.jpg" alt="2"></li>
+  		<li><img src="../../img/pc03.jpg" alt="3"></li>
+  	</ul>
+
+  	<div class="btn">
+  		<span class="bt_prev">P</span>
+  		<span class="bt_next">N</span>
+  	</div>
+  </div>		
+</body>
+
+</html>	

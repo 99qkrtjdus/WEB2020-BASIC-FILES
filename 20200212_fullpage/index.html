@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Fullpage</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		$("#fullpage").fullpage({
+  			anchors:["1st","2st","3st","4st","5st"],
+  			menu: "#topmenu",
+  			navigation:true,
+  			slideNavigation:true,
+  		  afterLoad:function(anchorslink,index){
+          console.log(anchorslink+","+index);
+          if(index == 2){
+            $("#page1 iframe").addClass("src","https://www.youtube.com/embed/zcnANJebBbM?autoplay=1");
+          }else{
+            $("#page1 iframe").removeClass("src","");
+          }
+          if(index == 3){
+            $("#view").addClass("moving");
+          }else{
+            $("#view").removeClass("moving");
+          } 
+          } 
+      });  
+  	});
+  </script>
+  <style>
+  	nav#navTop{
+      width: 1000px;
+  		position: fixed;
+  		z-index:1;
+  		background-color: #cdcdcd;
+  		padding-left: 10px;
+  	}
+  	nav#navTop li{float: left;}
+  	nav#navTop li a {
+  		display: block; 
+  		line-height: 50px; 
+  		text-align: center; 
+  		padding: 0 10px;
+  	} 
+  	#page1{background-image: url(images/bg1.jpg);}
+  	#page2{background-image: url(images/bg2.jpg);}
+  	#page3{background-image: url(images/bg3.jpg);}
+  	#page4{background-image: url(images/bg4.jpg);}
+
+  	.page{
+  		background-repeat: no-repeat;
+  		background-position: center;
+  		background-size: cover;
+      text-align: center;
+  	}
+
+    .scroll{
+      position: absolute; 
+      bottom: 20px; 
+      left: 50%; 
+      transform: translateX(-50%);
+      animation-name: xScoll;
+      animation-duration: 0.8s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    @keyframes xScoll{
+      from{bottom: 20px;}
+      to{bottom: 40px;}
+    }
+
+  	#navTop .active{background-color: salmon;}
+
+    .main{
+      width: 400px; 
+      position: absolute; 
+      left: 50%;
+      transform: translate(-50%,50%);
+      color: white;
+      text-align: center;
+    }
+
+    .main h3{font-size: 3em;}
+    .main p{font-size: 1.5em; margin-bottom: 20px;}
+    .main a{
+      display: block;
+      border: 1px solid #fff;
+      text-align: center;
+      width: 150px;
+      line-height: 35px;
+      color: white;
+      border-radius: 7px;
+      margin: auto;
+      transition: 0.3s;
+    }
+    .main a:hover{
+      background-color: #fff;
+      color: #000;
+    }
+    #onView{top: 20%; transition: 0.3s; opacity: 0;}
+    #onView.move{top: 50%; opacity: 1;}
+
+    #view{left: 20%; transition: 0.3s; opacity: 0;}
+    #view.moving{left: 50%; opacity: 1;}
+
+    #myvideo{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-size: 100% 100%;
+      background-color: #000;
+      background-position: center center;
+      object-fit: cover;
+      z-index: 3;
+    }
+  </style>
+</head>
+
+<body>
+	<nav id="navTop">
+		<ul id="topmenu" class="clearfix">
+			<li data-menuanchor = "1st"><a href="#1st">menu1</a></li>
+			<li data-menuanchor = "2st"><a href="#2st">menu1</a></li>
+			<li data-menuanchor = "3st"><a href="#3st">menu1</a></li>
+			<li data-menuanchor = "4st"><a href="#4st">menu1</a></li>
+		</ul>
+	</nav>
+
+	<div id="fullpage">
+		<div class="section page" id="page1" data-anchor="1st">]
+      <video id="myvideo" width="1260" height="720" autoplay muted data-autopla>
+        <source src="../20200218_video/video.webm" type="video/webm">
+      </video>
+      <div class="scroll">
+        <a href="#2st">
+          <img src="images/btn_scroll.png" alt="">
+        </a>
+      </div>  
+    </div>
+    <div class="section page" id="page2" data-anchor="2st">
+      <div class="main" id="onView">
+        <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit.</p>
+        <a href="#">more</a>
+      </div>
+      <div class="scroll">
+        <a href="#3st">
+          <img src="images/btn_scroll.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="section page" id="page3" data-anchor="3st">
+      <div class="main" id="view">
+        <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit.</p>
+        <a href="#">more</a>
+      </div>
+      <div class="scroll">
+        <a href="#4st">
+          <img src="images/btn_scroll.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="section page" id="page4" data-anchor="4st">
+      <style>
+        .slide{position: relative;}
+        .slide .sView1,
+        .slide .sView2,
+        .slide .sView3,
+        .slide .sView4{
+          position: absolute; 
+          width: 500px;
+          height: 500px;
+          background-color: #f00;
+          left: 50%;
+          right: 50%;
+          transform: translate(-50%,-50%);
+        }
+      </style>
+      <div class="slide">
+        <div class="sView1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, nobis.</div>
+      </div>
+
+      <div class="slide">
+        <div class="sView2">Suscipit libero iste quas blanditiis beatae animi reiciendis nostrum facilis!</div>
+      </div>
+
+      <div class="slide">
+        <div class="sView3">Molestias tenetur voluptates saepe non, aliquam qui eius inventore, distinctio.</div>
+      </div>
+
+      <div class="slide">
+        <div class="sView4">Culpa voluptatem esse repellendus eligendi nam, omnis qui odio dolorem?</div>
+      </div> 
+    </div>
+
+    <div class="section page fp-auto-height" id="page5" data-anchor="5st">
+      <div class="footer" style="background-color: skyblue; height: 100px;"></div>
+    </div>
+  </div>
+</body>
+</html>

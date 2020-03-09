@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		.contentwrap{width: 1000px; margin: 0 auto;}
+		.contentwrap li{
+			float: left; 
+			width: 20%; 
+			text-align: center;
+			line-height: 40px;
+			border: 1px solid #fff;
+		}
+
+		.contentwrap li:hover{background-color: brown;}
+		.contentwrap li.active{background-color: brown; color: #fff;}
+
+		.contentwrap .content{border: 1px solid #fff;}
+		.contentwrap .content div{padding: 30px; display: none;}
+		.contentwrap .content div:first-child{display: block;}
+	</style>
+
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".contentwrap>ul>li").click(function(){
+				var liNum = $(this).index();
+				console.log(liNum);
+				$(".contentwrap>ul>li").removeClass();
+				$(this).addClass("active");
+				$(".content>div").hide();
+				$(".content>div").eq(liNum).show();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="contentwrap">
+		<ul class="clearfix">
+			<li class="active" style="background-color: skyblue;">다시 난, 여기</li>
+			<li style="background-color: hotpink;">노을</li>
+			<li style="background-color: yellowgreen;">Flower</li>
+			<li style="background-color: orange;">내 마음의 사진</li>
+			<li style="background-color: purple;">어떤날엔</li>
+		</ul>
+		
+		<div class="content">
+			<div style="color: skyblue;">
+				I'm still and I'm here <br>
+				다시 널 놓치지 않을래<br>
+				세상 어느 곳에 있더라도 <br>
+				어디라도 내가 찾아갈게<br>
+				여기 나 여기 곁에 늘 서 있을게<br>
+				나의 맘이 움직여 <br>
+				and I'm still, I'm here<br>
+			</div>
+
+			<div style="color: hotpink;">
+				아무 말 하지 않아도 <br>
+				그대 눈빛을 보면<br>
+				전해지는 시린 마음 <br>
+				깊게 잠긴 목소리<br>
+				옅은 그 미소는 <br>
+				긴 하루를 보여주네<br>
+			</div>
+
+			<div style="color: yellowgreen;">
+				내 마음은 늘 그대 거였죠 <br>
+				내 걱정은 늘 그대뿐이죠 <br>
+				always, your way <br>
+				널 향해 있을게 <br>
+				이 순간이 참 행복하다면 <br>
+				그대가 있어서겠죠<br>
+				always 잊지 마요 <br>
+				내가 있다는 걸<br>
+			</div>
+
+			<div style="color: orange;">
+				꿈같은 운명 사라진대도 <br>
+				마음 깊은 곳에 새겨져<br> 
+				이 길에 홀로 남아 있어도 <br>
+				이렇게 그댈 보죠<br>
+				그대의 얼굴 그대의 숨결 <br>
+				내게 피었던 모든 순간<br>
+				지울 수 없는 작은 그 사진처럼<br> 
+				영원히 내 맘속에 영원히<br>
+			</div>
+
+			<div style="color: purple;">
+				어떤 날엔 그대가 <br>
+				어떤 날엔 울어요<br>
+				행복을 빌어주는 일 <br>
+				너무 어려워서 난 <br><br>
+				한 번 더 그대 곁에 <br>
+				가고 싶어요 그대여<br>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			var parent = $("#child").offsetParent();
+			console.log(parent.attr("id"));
+      
+      function hanPo(){
+      	var child = $("#child").position();
+			  var childOffset = $("#child").offset();
+			  $(".poX").html(child.left);
+			  $(".ofX").html(childOffset.left);
+      }
+
+      $(window).resize(function(){
+        hanPo();	
+      });
+
+      hanPo();  
+   
+      // var childWidth = $("#child").width
+		  // $(".glow").click(function(){
+		  // 	childWidth+=10;
+		  // 	console.log(childWidth)
+		  // 	$("#child").width(childWidth);
+		  // });
+      
+      $(".grow").click(function(){
+      	$("#child").width("+=10").height("+=10")
+      });
+      $(".low").click(function(){
+      	$("#child").width("-=10").height("-=10")
+      });
+      
+      $(".btn").click(function(){
+      	// return false;
+      	e.preventDefault();
+      	// $(window).scrollTop(0);
+      	$("html,body").animate({scrollTop:0},300);
+      });
+
+		});
+	</script>
+	<style>
+		#parent1{
+			position: relative;
+			width: 300px;
+			height: 300px;
+			background-color: #ccc;
+			margin: 0 auto;
+		}
+		#parent2{
+			width: 200px;
+			height: 200px;
+			background-color: #ff0;
+			margin:50px; 
+		}
+
+    #child{
+    	position: absolute;
+    	width: 100px;
+    	height: 100px;
+    	background-color: #f00;
+    	left: 20px;
+    }
+
+    .btnwrap{
+    	position: fixed;
+    	right: 0;
+    	bottom: 0;
+    	background-color: #f00;
+    	width: 50px;
+    	height: 50px;
+    	border-radius: 50%;
+    }
+	</style>
+</head>
+
+<body>
+	<div id="parent1">
+		parent
+		<div id="parent2">
+			parent2
+			<div id="child">child</div>
+		</div>
+	</div>
+	<div class="txt">
+		child position x : <span class="poX">0</span><br>	  
+		child offset x : <span class="ofX">0</span><br> 
+	</div>
+	<button class="grow">키우기</button>
+	<button class="low">줄이기</button>
+
+	<div style="height: 3000px"></div>
+	<div class="btnwrap">
+		<a href="#parent2" class="btn">위로 올라가기</a>
+	</div>
+</body>
+</html>
