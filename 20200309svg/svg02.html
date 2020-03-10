@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>health</title>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		body{background-color: salmon;}
+		.svgwrap{width: 500px; margin: 0 auto;}
+		#svgWrapper path{
+			stroke: #000;
+			stroke-width:1;
+			fill:#000;
+			animation: textView 1s forwards; 
+		}
+
+		@keyframes textView{
+			from{opacity: 0; fill: salmon;}
+			to{opacity: 1; fill:#000;}
+		}
+	</style>
+
+	<script>
+		$(function(){
+      var pathes = $("#svgWrapper").find("path");
+      var pathLength = pathes.length;
+      console.log(pathLength);
+
+      // for(var i=0;i<pathLength;i++){
+      // 	var path = $("#svgWrapper path").get(i);
+	     //  var total_length = path.getTotalLength();
+	     //  path.style.strokeDasharray = total_length;
+	     //  path.style.strokeDashoffset = total_length;
+	     //  $(path).animate({"strokeDashoffset":0},1000);
+      // }
+
+      pathes.each(function(i,path){
+        var total_length = path.getTotalLength();
+	      path.style.strokeDasharray = total_length;
+	      path.style.strokeDashoffset = total_length;
+	      $(path).animate({"strokeDashoffset":0},1000);
+      });
+
+      
+
+		});
+	</script>
+</head>
+<body>
+	<div class="svgwrap">
+		<svg version="1.1" id="svgWrapper"x="0px" y="0px" width="200px" height="100px" viewBox="0 0 200 100" >
+			<g>
+				<path d="M29.557,20.842v18.533h15.56V20.842h4.2v44.295h-4.2V44.369h-15.56v20.768h-4.152V20.842H29.557z"/>
+				<path d="M73.178,44.369H60.673v15.97H74.61v4.798H56.521V20.842h17.374v4.797H60.673v13.999h12.505V44.369z"/>
+				<path d="M85.203,51.204l-3.341,13.933h-4.296l10.93-44.295h5.012l10.978,44.295h-4.438L96.61,51.204H85.203z M95.751,46.735
+					l-3.149-12.75c-0.717-2.892-1.193-5.521-1.671-8.083h-0.096c-0.478,2.628-1.002,5.323-1.623,8.018l-3.149,12.815H95.751z"/>
+				<path d="M109.207,20.842h4.153v39.497h13.746v4.798h-17.899V20.842z"/>
+				<path d="M133.643,25.705h-9.785v-4.863h23.817v4.863h-9.833v39.432h-4.199V25.705z"/>
+				<path d="M155.404,20.842v18.533h15.56V20.842h4.2v44.295h-4.2V44.369h-15.56v20.768h-4.152V20.842H155.404z"/>
+      </g>
+		</svg>
+	</div>
+</body>
+</html>

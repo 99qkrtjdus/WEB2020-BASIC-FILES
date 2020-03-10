@@ -12,32 +12,40 @@
 			var banner = $("ul.slider li");
 			var bCount = banner.length;
 			var i;
+			var overBtn = false;
 
 			function nextSlider(){
-				i = current + 1;
-				if(i==bCount){
+				if(overBtn == false){
+					overBtn = true;
+				  i = current + 1;
+				  if(i==bCount){
 					i=0;
 					current=bCount-1;
+				  }
 				}
 				var currentEl = banner.eq(current);
 				var nextEl = banner.eq(i);
 				
 				currentEl.css({left:0}).stop().animate({left:"-100%"},1000);
-				nextEl.css({left:"100%"}).stop().animate({left:0},1000);
+				nextEl.css({left:"100%"}).stop().animate({left:0},{duration:1000,complete:function(){overBtn=false;}});
 
 				current = i;
 			}
 
 			function prevSlider(){
-				i = current - 1;
-				if(i==-1){
+				if(overBtn == false){
+					overBtn = true;
+					i = current - 1;
+				  if(i==-1){
 					i=bCount-1;
 					current=0;
 				}
+				}
+				
 				var currentEl = banner.eq(current);
 				var nextEl = banner.eq(i);
 				currentEl.css({left:0}).stop().animate({left:"100%"},1000);
-				nextEl.css({left:"-100%"}).stop().animate({left:0},1000);
+				nextEl.css({left:"-100%"}).stop().animate({left:0},{duration:1000,complete:function(){overBtn=false;}});
 				current = i;
 			}
 
@@ -48,7 +56,9 @@
 			$(".bt_prev").click(function(){
 				prevSlider();
 				console.log(current);
-			}); 
+			});
+
+			 
 		});
 	</script>
 
@@ -61,8 +71,8 @@
 
     div.btn{position: relative;}
 		div.btn span{cursor: pointer; position: absolute; color: white}
-		.bt_prev{top: -125px; font-weight: bold;}
-		.bt_next{top: -125px; right: 0; font-weight: bold;}
+		.bt_prev{top: -125px; font-weight: bold; font-size: 30px;}
+		.bt_next{top: -125px; right: 0; font-weight: bold; font-size: 30px;}
 
 	</style>
 </head>
