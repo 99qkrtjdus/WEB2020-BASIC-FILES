@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		body{background-color:skyblue;}
+		.st0{
+			fill:none;
+			stroke:#000;
+			stroke-miterlimit:10;
+			stroke-dasharray:300;
+			stroke-dashoffset:300;
+			
+		}
+
+		@keyframes lineAni{
+			to{stroke-dashoffset:0;}
+    }
+
+    .svgWrap.animate .st0{
+    	animation:lineAni 1s forwards linear;
+    }
+
+		
+	</style>
+	<script>
+		$(window).scroll(function(){
+			var svgTop = $(this).scrollTop();
+      console.log(svgTop);
+			if(svgTop>500){
+        $(".svgWrap").addClass("animate") 
+			}else{
+				$(".svgWrap").removeClass("animate");
+			}
+		}); 
+	</script>
+</head>
+<body>
+	<div style="height: 1000px;"></div>
+  <div class="svgWrap">
+  	<svg id="Layer_1" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 100 100">
+  	  <path class="st0" d="M5.867,5.599c0,0,38.978-1.745,31.566,42.38 c-7.411,44.126,24.292,36.398,29.233,38.642"/>
+  	</svg>
+  </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		body{background-color:;}
+		.st0{
+			fill:none;
+			stroke:#000000;
+			stroke-width:0.5;
+			stroke-miterlimit:10;
+			stroke-dasharray:300;
+			stroke-dashoffset:300;		
+		}
+
+		@keyframes lineAni{
+			to{stroke-dashoffset:0;}
+    }
+
+    .svgWrap path:nth-child(1){stroke: red;}
+    .svgWrap path:nth-child(2){stroke: yellow; animation-delay: 0.2s;}
+    .svgWrap path:nth-child(3){stroke: pink; animation-delay: 0.4s;}
+    .svgWrap path:nth-child(4){stroke: orange; animation-delay: 0.6s;}
+    .svgWrap path:nth-child(5){stroke: green; animation-delay: 0.8s;}
+    .svgWrap path:nth-child(6){stroke: blue; animation-delay: 1.0s;}
+    .svgWrap path:nth-child(7){stroke: purple; animation-delay: 1.2s;}
+    .svgWrap path:nth-child(8){stroke: brown; animation-delay: 1.4s;}
+    .svgWrap path:nth-child(9){stroke: gray; animation-delay: 1.6s;}
+    .svgWrap path:nth-child(10){stroke: black; animation-delay: 1.8s;}
+
+    .svgWrap.animate .st0{
+    	animation:lineAni 1s forwards linear;
+    }		
+	</style>
+
+	<script>
+		$(window).scroll(function(){
+			var svgTop = $(this).scrollTop();
+      console.log(svgTop);
+			if(svgTop>500){
+        $(".svgWrap").addClass("animate") 
+			}else{
+				$(".svgWrap").removeClass("animate");
+			}
+		}); 
+	</script>
+</head>
+
+<body>
+	<div style="height: 1000px;"></div>
+	<div class="svgWrap">
+		<svg id="Layer_1" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 100 100">
+			<path class="st0" d="M1,6.337c0,0,39.341-1.745,31.86,42.38 c-7.479,44.126,24.519,36.398,29.506,38.642"/>
+			<path class="st0" d="M1,7.728c0,0,34.462,0.538,31.399,41.132 c-3.062,40.596,25.154,31.662,31.298,37.029"/>
+			<path class="st0" d="M1,9.119c0,0,29.583,2.82,30.938,39.883 c1.355,37.064,25.79,26.925,33.091,35.416"/>
+			<path class="st0" d="M1,10.51c0,0,24.705,5.102,30.477,38.634 c5.772,33.533,26.425,22.189,34.884,33.803"/>
+			<path class="st0" d="M1,11.901c0,0,19.826,7.385,30.015,37.386 c10.19,30.001,27.06,17.454,36.676,32.189"/>
+			<path class="st0" d="M1,13.292c0,0,14.947,9.668,29.554,36.138 C45.161,75.9,58.25,62.147,69.023,80.006"/>
+			<path class="st0" d="M1,14.684c0,0,10.068,11.95,29.093,34.889 c19.024,22.939,28.331,7.981,40.262,28.963"/>
+			<path class="st0" d="M1,16.075c0,0,5.19,14.232,28.631,33.64 c23.442,19.408,28.966,3.245,42.054,27.35"/>
+			<path class="st0" d="M1,17.466c0,0,0.312,16.515,28.17,32.392 s29.601-1.491,43.846,25.736"/>
+			<path class="st0" d="M1,18.857c0,0-4.567,18.797,27.709,31.143 s30.237-6.228,45.64,24.123"/>
+		</svg>
+	</div>
+</body>
+</html>
