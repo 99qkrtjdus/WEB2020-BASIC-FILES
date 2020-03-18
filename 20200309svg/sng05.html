@@ -12,9 +12,9 @@
 			fill:none;
 			stroke:#000;
 			stroke-miterlimit:10;
-			stroke-dasharray:300;
-			stroke-dashoffset:300;
-			
+			stroke-dasharray:120;
+			stroke-dashoffset:120;
+			stroke-linecap: round; 
 		}
 
 		@keyframes lineAni{
@@ -28,14 +28,24 @@
 		
 	</style>
 	<script>
-		$(window).scroll(function(){
-			var svgTop = $(this).scrollTop();
-      console.log(svgTop);
-			if(svgTop>500){
-        $(".svgWrap").addClass("animate") 
-			}else{
-				$(".svgWrap").removeClass("animate");
-			}
+		$(function(){
+			var path = $(".svgWrap path").get(0);
+			var total_length = path.getTotalLength();
+			console.log(total_length);
+			$(window).scroll(function(){
+				var scrollTop = $(this).scrollTop();
+				var sScroll = 200;
+				var eScroll = 600;
+				var x;
+				
+				x = ((scrollTop-sScroll)*(0-total_length))/(eScroll-sScroll)+total_length;
+				console.log("스트롤톱:"+scrollTop+"엑스값:"+x);
+
+				if(x>total_length){x=total_length}
+			  if(x<0){x=0}
+
+				$(".st0").css("stroke-dashoffset",x);
+			});
 		}); 
 	</script>
 </head>
@@ -46,5 +56,6 @@
   	  <path class="st0" d="M5.867,5.599c0,0,38.978-1.745,31.566,42.38 c-7.411,44.126,24.292,36.398,29.233,38.642"/>
   	</svg>
   </div>
+  <div style="height: 500px;"></div>
 </body>
 </html>
