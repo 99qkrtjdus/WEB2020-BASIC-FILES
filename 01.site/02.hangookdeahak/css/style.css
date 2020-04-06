@@ -428,17 +428,15 @@ div#sliderWrap>div.lastwrap>div.l-text p{
   color: #000;
 }
 
-footer.footer{height: 165px; background-color: #fff; padding-top: 20px;}
+footer.footer{height: 165px; background-color: #fff; padding: 20px 0;}
 footer.footer>div.addresswrap {width: 1200px; margin: 0 auto;}
-
+footer.footer>address.ft{font-style: normal;}
 footer.footer>address.ft h3{
   color: #444;
   float: left;
-  font-style: normal;
 }
 
 footer.footer>address.ft p{
-  
   color: #888;
   font-size: 20px;
 }

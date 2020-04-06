@@ -468,21 +468,24 @@ div.boxwrapper>ul>li{
 /*footer start*/
 .footer{
 	height: 100px;
-	padding-top: 20px;
+	padding: 30px 0; 
 }
 
 .footer>.addresswrap{
 	width: 980px; 
 	margin: 0 auto;
+	padding: 30px 0;
 }
 
 .footer>.addresswrap p.top{
 	color: #000;
 	margin-bottom: 10px;
+	text-align: center;
 }
 
 .footer>.addresswrap p{
 	color:#6f6f6f;
 	font-size:15px;
+	text-align: center;
 }
 /*footer end*/
