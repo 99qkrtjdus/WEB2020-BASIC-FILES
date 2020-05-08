@@ -61,33 +61,48 @@
   </script>
   <style>
   	nav#navTop{
-      width: 1000px;
-      z-index: 1;
+      width: 800px;
       position: fixed;
       left: 50%;
-      transform:translateX(-50%);	
+      transform: translateX(-50%);
+      z-index: 1;
     }
     ul#topmenu{
       display: table;
       width: 90%;
       margin: 20px auto;
-
+      border: 2px solid #fff;
     }
+
     nav#navTop li{
       display: table-cell;
-      background-color: #cdcdcd;
-      border-radius: 30px;
+      /*background-color: #77b193;*/
     }
-    nav#navTop li a {
-      display: block; 
-      line-height: 40px; 
-      text-align: center; 
+    
+    nav#navTop li:first-child{border-left: none;}
+    nav#navTop li:hover a{background-color: #fff; color: #000;}
+    nav#navTop li.active a{background-color: #fff; color: #000;}
+    nav#navTop li a{
+      display: block;
+      line-height: 40px;
+      text-align: center;
       padding: 0 5px;
-    } 
-    #page1{background-image: url(images/mainvisual_poster.jpg);}
-    #page2{background-color: #e0d7ce;}
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    #fullpage{} 
+    #page1{background-image: url(images/mainmain.jpg); position: relative;}
+    #page2{background-image: url(images/mainmain22.jpg); padding-right: ;}
     #page3{background-image: url(images/mainvisual_poster.jpg); margin: 0 auto;}
-    #page4{background-image: url(images/main01-01.jpg);}
+    #page4{background-image: url(images/mainmain4.jpg);}
+
+    .ghed{
+      width: 300px; height: 80px; background-color: #10435b; position: absolute; bottom: 50px;
+      left: 50%; transform: translateX(-50%);
+    }
+    .ghed>a{color: #fff; font-size: 30px; font-weight: bold; text-align: center; line-height: 80px; padding-left: 90px;} 
 
     .page{
       background-repeat: no-repeat;
@@ -142,7 +157,17 @@
       height: 400px;
     }
     .swiperimg{width: 400px; height: 400px;}
-    
+
+    .djimwrapper{
+      width: 1600px; height: 400px; position: absolute; top: 150px; left: 50%; transform: translateX(-50%);
+    } 
+    .djimwrap>li{
+      float: left; width: 400px; height: 400px;
+      
+    }
+    .djimwrap>li:hover{filter: drop-shadow(5px 5px 5px #555); transform:translate(-30px,-30px);}
+
+    .djim{display: block; width: 400px; height: 400px;}
     
 
   </style>
@@ -160,10 +185,19 @@
     </nav>
   </div>
   <div id="fullpage">
-    <div class="section page" id="page1" data-anchor="1st"></div>
+    <div class="section page" id="page1" data-anchor="1st">
+      <div class="ghed"><a href="images/bg1.jpg">기획의도</a></div>
+    </div>
 
     <div class="section page" id="page2" data-anchor="2st">
-       
+      <div class="djimwrapper">
+        <ul class="clearfix djimwrap">
+          <li><a href="#"><img src="images/im01.png" alt="" class="djim"></a></li>
+          <li><a href="#"><img src="images/im02.png" alt="" class="djim"></a></li>
+          <li><a href="#"><img src="images/im03.png" alt="" class="djim"></a></li>
+          <li><a href="#"><img src="images/im04.png" alt="" class="djim"></a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="section page" id="page3" data-anchor="3st">

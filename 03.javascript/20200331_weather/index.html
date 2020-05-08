@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+	
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>오늘의 날씨</title>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<style>
 		/*reset*/
@@ -12,19 +15,23 @@
 		a:visited,a:link{text-decoration: none; color: #000}
 		.clearfix:after{display: block; clear: both; content: "";}
 
-		.wrapper{background: url(img/Untitled-1.jpg) no-repeat center;}
+		.wrapper{
+			background: url(img/twbg.png) no-repeat center; background-size: 500px 800px;
+			filter: drop-shadow(5px 5px 5px #333);
+		}
 
-		#weather_info{width: 500px; height: 800px; margin: 0 auto;position: relative;}
-		h1{text-align: center; color: white; padding-top: 30px;}
-		p.w_id,div.icon,p.temp,div.tempwrap{position: absolute; color: white;}
+		#weather_info{width: 500px; height: 800px; margin: 0 auto; position: relative;}
+		h1{color: #000; padding-top: 260px; position: absolute; left: 160px; margin-bottom: 10px; }
+		p.w_id,div.icon,p.temp,div.tempwrap{position: absolute; color: #000;}
     
-    p.w_id{top: 250px; left: 50%; transform: translateX(-50%);}
-    div.icon{top: 180px; left: 50%; transform: translateX(-50%);}
-    p.temp{top: 100px; left: 50%; transform: translateX(-50%); font-size: 3em;}
+    p.w_id{top: 300px; left: 180px; font-weight: bold;}
+    div.icon{top: 330px;	left: 180px;}
+    p.temp{top: 400px;	left: 180px; font-size: 2.5em;}
 
-    div.tempwrap{bottom: 80px; left: 50%; transform: translateX(-50%);color: #000; font-size: 20px;}
+    div.tempwrap{bottom: 250px; left: 135px; color: #000; font-size: 20px;}
+    div.tempwrap>p{float:left; margin-left: 10px;}
 
-    #time-result{w}
+    
 	</style>
 </head>
 
@@ -37,7 +44,7 @@
 		  		<p class="w_id">clear</p>
 		  		<div class="icon">icon</div>
 		  		<p class="temp">9</p>
-		  		<div class="tempwrap">
+		  		<div class="tempwrap clearfix">
 		  			<p class="temp_max">최대</p>
 		  			<p class="temp_min">최소</p>
 		  		</div>
@@ -77,8 +84,8 @@
       $(".icon").html("<img src='"+icon_url+"'>");
 			$(".w_id").html(wmain);
 			$(".temp").html(parseInt(temp-273.15)+"&deg;");
-			$(".temp_max").html(parseInt(temp_max-273.15)+"&deg; 최고온도");
-			$(".temp_min").html(parseInt(temp_min-273.15)+"&deg; 최저온도");
+			$(".temp_max").html(parseInt(temp_max-273.15)+"&deg; ▲");
+			$(".temp_min").html(parseInt(temp_min-273.15)+"&deg; ▼");
   	});
   </script>	
 </body>

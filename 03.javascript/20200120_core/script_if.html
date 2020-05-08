@@ -17,10 +17,10 @@
     else if (score >= 80) {grade = "B";}
     else if (score >= 70) {grade = "C";}
     else if (score >= 60) {grade = "D";}
-    else if (score >= 50) {grade = "E";}
-    else {grade = "F";}
+    else if (score <= 50) {grade = "E";}
+    // else {grade = "F";}
 
-    document.write(score + "는" + grade + "입니다.");
+    document.write("한성용 점수는" + score + "학점은" + grade + "입니다.");
 	</script>
 </body>
 </html>
