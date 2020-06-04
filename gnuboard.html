@@ -3,42 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script>
-  	$(function(){
-  		if(x > 10){
-  			if(x < 20){
-  				console.log("조건에 맞습니다.");
-  			}
-  		}
-  	});	
-  </script>	
+	<link rel="stylesheet" href="../slick/slick.css">
+	<link rel="stylesheet" href="../slick/slick-theme.css">
+	<script src="../slick/slick.js"></script>
+
+	<style type="text/css">
+		html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+	</style>
+
 </head>
 <body>
-	<p id="demo"></p>
-
-	<!-- <script>
-		var level = 1;
-		
-		switch (level) {
-		  case 1:
-		    level = "12학점";
-		    break;
-		  case 2:
-		    level = "18학점";
-		    break;
-		  case 3:
-		    level = "10학점";
-		    break;
-		  case 4:
-		    level = "18학점";
-    
-	
-		}
-		document.getElementById("demo").innerHTML = "수강해야 하는 전공 학점 : " + level;
-	</script> -->
-
-
-
+	<section class="vertical-center-4 slider">
+		<div><img src="img/img1.jpg" alt=""></div>
+		<div><img src="img/img2.jpg" alt=""></div>
+		<div><img src="img/img3.jpg" alt=""></div>
+		<div><img src="img/img4.jpg" alt=""></div>
+		<div><img src="img/img5.jpg" alt=""></div>
+		<div><img src="img/img6.jpg" alt=""></div>
+		<div><img src="img/img7.jpg" alt=""></div>
+	</section>
 </body>
 </html>
